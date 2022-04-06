@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 2% 10%;
+  background: #f3ede5;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+button,
+a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@import "nav";
+@import "external";
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  .main_header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    h1 {
+      font-size: 6rem;
+      margin-left: -0.5%;
+
+      span {
+        color: #f6b300;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #4f4f4f;
+      width: 90%;
+      font-weight: 400;
+    }
+
+    .header_btn {
+      padding: 1.5rem 2.5rem;
+      margin: 2% 0;
+
+      font-size: 1.6rem;
+      color: rgb(99, 99, 99);
+      background-color: #133416;
+      color: white;
+      border-radius: 3px;
+      font-weight: 550;
+    }
+
+    .testimonial {
+      display: flex;
+      width: 100%;
+      margin: 4% 0;
+      color: #4f4f4f;
+
+      svg {
+        margin-left: 2%;
+      }
+    }
+  }
+
+  .img_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80%;
+    }
+  }
+}
+
+// Footer
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    color: #4f4f4f;
+    margin-bottom: 2%;
+  }
+  .brands {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    svg {
+      margin: 1% 2%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 38%;
+  }
+
+  header .img_header img {
+    width: 70%;
+  }
+
+  header .main_header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    .nav_links {
+      display: none;
+    }
+
+    .nav_btn button {
+      font-size: 2rem;
+    }
+  }
+  header {
+    .main_header {
+      width: 100%;
+      padding: 10% 0;
+      justify-content: flex-start;
+
+      h1 {
+        width: 70%;
+        padding: 1% 0;
+      }
+
+      h2 {
+        width: 70%;
+        font-size: 2.5rem;
+        padding: 1% 0;
+      }
+
+      .header_btn {
+        font-size: 2.5rem;
+      }
+
+      .testimonial {
+          font-size: 2rem;
+      }
+    }
+    .img_header {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 5% 4%;
+  }
+  header .main_header h1,
+  header .main_header h2 {
+    width: 100%;
+  }
+
+  footer p {
+      font-size: 2rem;
+  }
+}

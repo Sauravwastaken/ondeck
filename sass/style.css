@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 2% 10%;
+  background: #f3ede5;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+button,
+a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1vw 0;
+}
+
+nav .nav_links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav_links li {
+  padding: 0 1vw;
+}
+
+nav .nav_links li a {
+  color: #636363;
+}
+
+nav .nav_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav_btn button {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.6rem;
+  color: #636363;
+}
+
+nav .nav_btn .primary {
+  background-color: #133416;
+  color: white;
+  border-radius: 3px;
+  font-weight: 550;
+}
+
+nav .nav_btn .secondary {
+  background: transparent;
+}
+
+.underline {
+  --line: #646B8C;
+  --color: #2B3044;
+  text-decoration: none;
+  color: var(--color);
+  position: relative;
+}
+
+.underline span {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--line)), to(var(--line)));
+  background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: var(--background-size, 100%) 1px;
+  -webkit-transition: background-size 0.2s linear var(--background-delay, 0.15s);
+  transition: background-size 0.2s linear var(--background-delay, 0.15s);
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.underline svg {
+  vertical-align: top;
+  display: inline;
+  line-height: 1;
+  width: 13px;
+  height: 20px;
+  position: relative;
+  left: -2px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+  stroke: var(--line);
+  stroke-dasharray: 7.95 30;
+  stroke-dashoffset: var(--stroke-dashoffset, 46);
+  -webkit-transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+  transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+}
+
+.underline:hover {
+  --background-size: 0%;
+  --background-delay: 0s;
+  --stroke-dashoffset: 26;
+  --stroke-duration: .3s;
+  --stroke-easing: cubic-bezier(.3, 1.5, .5, 1);
+  --stroke-delay: .195s;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5% 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .main_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .main_header h1 {
+  font-size: 6rem;
+  margin-left: -0.5%;
+}
+
+header .main_header h1 span {
+  color: #f6b300;
+}
+
+header .main_header h2 {
+  font-size: 1.5rem;
+  color: #4f4f4f;
+  width: 90%;
+  font-weight: 400;
+}
+
+header .main_header .header_btn {
+  padding: 1.5rem 2.5rem;
+  margin: 2% 0;
+  font-size: 1.6rem;
+  color: #636363;
+  background-color: #133416;
+  color: white;
+  border-radius: 3px;
+  font-weight: 550;
+}
+
+header .main_header .testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 4% 0;
+  color: #4f4f4f;
+}
+
+header .main_header .testimonial svg {
+  margin-left: 2%;
+}
+
+header .img_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .img_header img {
+  width: 80%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer p {
+  color: #4f4f4f;
+  margin-bottom: 2%;
+}
+
+footer .brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .brands svg {
+  margin: 1% 2%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 38%;
+  }
+  header .img_header img {
+    width: 70%;
+  }
+  header .main_header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  nav .nav_links {
+    display: none;
+  }
+  nav .nav_btn button {
+    font-size: 2rem;
+  }
+  header .main_header {
+    width: 100%;
+    padding: 10% 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .main_header h1 {
+    width: 70%;
+    padding: 1% 0;
+  }
+  header .main_header h2 {
+    width: 70%;
+    font-size: 2.5rem;
+    padding: 1% 0;
+  }
+  header .main_header .header_btn {
+    font-size: 2.5rem;
+  }
+  header .main_header .testimonial {
+    font-size: 2rem;
+  }
+  header .img_header {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 5% 4%;
+  }
+  header .main_header h1,
+  header .main_header h2 {
+    width: 100%;
+  }
+  footer p {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
