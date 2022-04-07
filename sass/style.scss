@@ -22,9 +22,90 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 0;
 
-@import "nav";
-@import "external";
+  .nav_links {
+      list-style: none;
+      display: flex;
+      
+      li {
+          padding: 0 1vw;
+          a {
+              color: rgb(99, 99, 99);
+
+          }
+      }
+  }
+
+  .nav_btn {
+      display: flex;
+
+      button {
+          padding: 1.5rem 2.5rem;
+          font-size: 1.6rem;
+      color: rgb(99, 99, 99);
+
+      }
+      .primary {
+          background-color: #133416;
+          color: white;
+          border-radius: 3px;
+          font-weight: 550;
+      }
+
+      .secondary {
+          background: transparent;
+      }
+      
+  }
+}
+.underline {
+  --line: #646B8C;
+  --color: #2B3044;
+  text-decoration: none;
+  color: var(--color);
+  position: relative;
+  span {
+      background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: var(--background-size, 100%) 1px;
+      transition: background-size .2s linear var(--background-delay, .15s);
+      font-size: 16px;
+      line-height: 20px;
+      transform: translateZ(0);
+  }
+  svg {
+      vertical-align: top;
+      display: inline;
+      line-height: 1;
+      width: 13px;
+      height: 20px;
+      position: relative;
+      left: -2px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1px;
+      stroke: var(--line);
+      stroke-dasharray: 7.95 30;
+      stroke-dashoffset: var(--stroke-dashoffset, 46);
+      transition: stroke-dashoffset var(--stroke-duration, .15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+  }
+  &:hover {
+      --background-size: 0%;
+      --background-delay: 0s;
+      --stroke-dashoffset: 26;
+      --stroke-duration: .3s;
+      --stroke-easing: cubic-bezier(.3, 1.5, .5, 1);
+      --stroke-delay: .195s;
+  }
+}
+
 
 header {
   display: flex;
