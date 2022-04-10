@@ -42,42 +42,109 @@ nav .nav_links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 2%;
 }
 
 nav .nav_links li {
   padding: 0 1vw;
+  margin: 1% 0;
+}
+
+nav .nav_links li .popup {
+  position: absolute;
+  background: white;
+  top: 200%;
+  width: 60rem;
+  left: -8%;
+  z-index: 3;
+  border-radius: 10px;
+  display: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+}
+
+nav .nav_links li .popup .popup_content .popup_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2.5% 0;
+}
+
+nav .nav_links li .popup .popup_content .popup_div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .nav_links li .popup .popup_content .popup_div div p {
+  margin: 0 2%;
+}
+
+nav .nav_links li .popup .popup_content .popup_div div .popup_title {
+  font-weight: bold;
+}
+
+nav .nav_links li .popup .popup_content .popup_div div .popup_desp {
+  margin: 0.5% 2%;
+  color: grey;
 }
 
 nav .nav_links li a {
   color: #636363;
 }
 
-nav .nav_btn {
+.nav_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .nav_btn button {
+.nav_btn .menu {
+  display: none;
+}
+
+.nav_btn button {
   padding: 1.5rem 2.5rem;
   font-size: 1.6rem;
   color: #636363;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-nav .nav_btn .primary {
+.nav_btn .primary {
   background-color: #133416;
   color: white;
   border-radius: 3px;
   font-weight: 550;
 }
 
-nav .nav_btn .secondary {
+.nav_btn .secondary {
   background: transparent;
 }
 
 .underline {
-  --line: #646B8C;
-  --color: #2B3044;
+  --line: #646b8c;
+  --color: #2b3044;
   text-decoration: none;
   color: var(--color);
   position: relative;
@@ -120,9 +187,9 @@ nav .nav_btn .secondary {
   --background-size: 0%;
   --background-delay: 0s;
   --stroke-dashoffset: 26;
-  --stroke-duration: .3s;
-  --stroke-easing: cubic-bezier(.3, 1.5, .5, 1);
-  --stroke-delay: .195s;
+  --stroke-duration: 0.3s;
+  --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+  --stroke-delay: 0.195s;
 }
 
 header {
@@ -263,6 +330,17 @@ footer .brands svg {
   }
 }
 
+@media (max-width: 1072px) {
+  nav .nav_links li .popup {
+    top: 130%;
+  }
+  nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 @media (max-width: 1000px) {
   html {
     font-size: 40%;
@@ -281,12 +359,46 @@ footer .brands svg {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 730px) {
+  nav .nav_title {
+    z-index: 1;
+  }
   nav .nav_links {
-    display: none;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3ede5;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-transition: 0.8s top;
+    transition: 0.8s top;
+  }
+  nav .nav_links li .popup {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 70%;
+  }
+  nav .nav_links li .popup .popup_content .popup_div {
+    margin: 6% 0;
+  }
+  nav .nav_btn {
+    z-index: 1;
+  }
+  nav .nav_btn .menu {
+    display: block;
   }
   nav .nav_btn button {
     font-size: 2rem;
+    display: none;
   }
   header .main_header {
     width: 100%;
@@ -324,6 +436,9 @@ footer .brands svg {
     width: 100%;
   }
   footer p {
+    font-size: 2rem;
+  }
+  header .main_header .header_btn {
     font-size: 2rem;
   }
 }
